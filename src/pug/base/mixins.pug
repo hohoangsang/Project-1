@@ -1,0 +1,223 @@
+mixin showcase_item_product(src)
+    img(src= src, alt="showcase image")
+
+mixin showcase_item_color( classFas, classDirection, src, content)
+    .color_item
+    i.fas(class=classFas)(class=classDirection)
+    .showcase_item_content
+        h4= content
+        img(src= src, alt= content)
+
+mixin testominial_content_item(src, content, name, position)
+    .testimonial_content_item
+        .item_left
+            img(src=src, alt="testimonial avatar").item_avatar.img-fluid
+        .item_right
+            p.item_right_content= content
+            .item_right_regency 
+                p.item_right_name= name
+                p.item_right_position= position
+
+mixin social_content(icon, title)
+    li.social_item
+        a(href="#")
+            .social_item_content
+                i.fab(class= icon).social_icon
+                p.social_title= title
+    li.social_separation
+        .social_separation_item
+
+mixin main_bottom_title(title, line, alt)
+    h4.title= title
+    img(src= line, alt= alt).line
+
+mixin listPath(list)
+    ul
+        each item in list   
+            li(class= item.className)
+                a(href="#")= item.located
+                i.fal.fa-angle-right(class= item.classIcon)
+
+mixin tableCart(img, num, total)
+    tr
+        td
+            img(src= img, alt="Product image")
+        td Lắc tay D&amp;G
+        td 345.000
+            sup đ
+        td
+            p= num
+        td= total
+            sup đ
+        td
+            i.fas.fa-trash-alt
+
+mixin tableAccount(status, debt)
+    tr  
+        td 
+            p #1006
+        td 
+            p May 13, 2013
+        td
+            p.red= status
+        td
+            p 350.000
+                sup đ
+        td
+            p= debt
+                sup đ
+
+mixin accountDetail(icon, content1, content2)
+    i.fas(class= icon)
+    .Detail__content
+        h5= content1
+        p= content2
+
+mixin formGroup(label, type, name, idInput, idError, placeholder)
+    .form-group
+        label= label 
+        input(type= type, name= name, id= idInput placeholder= placeholder checked)
+        i.fas.fa-check-circle
+        i.fas.fa-exclamation-circle
+        .error-message(id=idError)
+
+mixin blog-item(img, className)
+    .blog__content__post__item(class= className).col-12.col-sm-12.col-md-6.col-lg-4
+        img(src=img , alt="post image").img-fluid 
+        a(href="detail_blog.html")
+            h5 REVIEW SON KEM BOURJOIR VELVET
+        p Hi, chào các nàng...sau khá nhiều lời hứa hão thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tính xô nhau đi tắm Free để giải nhiệt.
+        span Bởi NamTran (27/05/2015)
+        .post__item__btn
+            a(href="#") Đọc thêm
+                i.fas.fa-angle-right
+            a(href="#") 23 Bình Luận
+
+mixin pagination
+    .pagination
+        .pagination__option
+            .pagination__option__grid
+                a(href="grid_product.html")
+                    i.fas.fa-th-large
+            .pagination__option__list
+                a(href="list_product.html")
+                    i.fas.fa-list
+        .pagination__num
+            i.fas.fa-caret-left
+            span.active 1
+            span 2
+            span 3
+            i.fas.fa-caret-right
+
+mixin post-item(img)
+    .blog-detail__aside__post__item
+        img(src=img , alt="post image")
+        .post__item__text   
+            h4  11
+                small / Tháng 5
+            p Đăng bởi bởi Giangle
+
+mixin grid-product(className, img, h4, old, disable)
+    .grid__content__product__item(class=className)
+        img(src=img , alt="product image")
+        a(href="detail_product.html").viewMore Xem chi tiết
+        .product__item__info
+            h4= h4
+            a(href="detail_product.html")
+                p.product__name Mỹ phẩm Châu Âu
+                p.underline
+            .price_info
+                span.price 335.000
+                    sup đ
+                span.price.old(class=disable)= old
+                    sup đ
+        .product__item__icon
+            include add-to-cart
+
+mixin category_item(title, title_id, collapse, heading, list, category_id)
+    .accordion-item.category__content__list__item(id= category_id)
+        h3(id= title_id).accordion-header
+            button.accordion-button.collapsed( data-bs-toggle='collapse' data-bs-target="#"+collapse aria-controls= collapse)= title
+        .accordion-collapse.collapse(id= collapse aria-labelledby= heading data-bs-parent='#accordionExample')
+            .accordion-body
+                nav
+                    ul
+                        each item in list
+                            li= item
+
+mixin list-product(img, title, price)
+    .list__content__product__item
+        img(src=img, alt="product image")
+        .product__item__info
+            a(href="detail_product.html")
+                h4=title
+            .product__item__info--appreciate
+                i.fas.fa-heart
+                i.fas.fa-heart
+                i.fas.fa-heart
+                i.fas.fa-heart
+                i.fas.fa-heart
+                p ( 4 Lượt mua )
+            .product__item__info__text
+                p Tự hào được ghi là năm mà Tyffany &amp; Co là thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà.
+            .product__item__info__price 
+                span= price
+                    small đ
+            .product__item__info__Btn 
+                include ../base/add-to-cart
+
+mixin info-content(src)
+    .info-product__content__item
+        .info-product__content__item__text
+            h5 THE MARK OF A LEGEND
+            .border-bottom
+            .item-text
+                p Tự hào được ghi là năm mà Tyffany &amp; Co là
+                p thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với
+                p qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp 
+                p đường cong và đường nét mượt mà.
+        .info-product__content__item__img
+            img(src= src , alt="image product")
+
+mixin top-selling
+    .info-product__topSelling__item
+        img(src= "./assets/images/detail/img3.jpg", alt="top selling image")
+        .info-product__topSelling__item__content
+            p Mỹ phẩm Châu Âu
+            .item__content-appreciate
+                i.fas.fa-heart
+                i.fas.fa-heart
+                i.fas.fa-heart
+                i.fas.fa-heart
+                i.fas.fa-heart
+                p ( 4 lượt mua )
+            .detail-price 
+                span 335.000đ
+
+mixin product-item(img, h4, old, disable)
+    .product__items__detail
+        img(src=img, alt="product image")
+        a(href="detail_product.html").viewMore Xem chi tiết
+        .product__items__detail__content
+            h4= h4
+            a(href="detail_product.html")
+                p.product__name Mỹ phẩm châu Âu
+                p.underline
+            .price_info
+                span.price 335.000
+                    sup đ
+                span.price.old(class=disable)= old
+                    sup đ
+        .product__items__detail__btn
+            include add-to-cart
+
+mixin process(className, name)
+    .process
+        .processbar
+            div(class= className)
+                span= name
+
+mixin customer(title, className)
+    .customer-item
+        p(class=className)= title
+            span

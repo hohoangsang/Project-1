@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap");
+.header {
+  height: 12vh;
+  background-color: transparent;
+  border-bottom: 1px solid #999; }
+  .header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1250px; }
+
+.header_menu {
+  width: fit-content;
+  margin: auto; }
+  .header_menu ul {
+    display: flex; }
+  .header_menu li {
+    list-style: none;
+    font-weight: bold; }
+  .header_menu li:Hover {
+    color: #789629;
+    cursor: pointer; }
+
+.header_right {
+  width: fit-content;
+  margin: auto 0; }
+  .header_right ul {
+    display: flex; }
+  .header_right li {
+    list-style: none; }

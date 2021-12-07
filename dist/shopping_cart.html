@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mandala</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <Body>
+    <header class="header">  
+      <div class="overlay"></div>
+      <div class="wrapper container-fluid">
+        <div class="header_left header_logo"><a href="index.html"><img src="assets/images/mandala-logo.png" alt="mandala-logo"></a></div>
+        <input type="radio" name="r" id="r1">
+        <input type="radio" name="r" id="r2">
+        <div class="header_middle header_menu">
+          <nav>
+            <ul>
+              <li><a href="index.html">TRANG CHỦ</a></li>
+              <li><a href="aboutUs.html">GIỚI THIỆU</a></li>
+              <li><a href="grid_product.html">SẢN PHẨM</a><i class="far fa-chevron-down"> </i><i class="fas fa-sort-up icon_sort_up"></i>
+                <div class="mega_menu_product">
+                  <nav>
+                    <ul>
+                      <p class="mega_menu_product_category">DƯỠNG DA</p>
+                      <li><a href="#">Áo khoác</a></li>
+                      <li><a href="#">Bộ áo liền quần</a></li>
+                      <li><a href="#">Dresses</a></li>
+                      <li><a href="#">Quần / Váy</a></li>
+                      <li><a href="#">Quần short</a></li>
+                      <li><a href="#">Quần jean</a></li>
+                      <li><a href="#">Đồ đan</a></li>
+                      <li><a href="#">Áo nỉ</a></li>
+                    </ul>
+                    <ul>
+                      <p class="mega_menu_product_category">NƯỚC HOA</p>
+                      <li><a href="#">Áo cánh / Áo sơ mi</a></li>
+                      <li><a href="#">Túi xách và Balo</a></li>
+                      <li><a href="#">Khăn quàng cổ và Foulards</a></li>
+                      <li><a href="#">Dệt kim Hats và Gloves</a></li>
+                      <li><a href="#">Vớ và Socks</a></li>
+                      <li><a href="#">Jewerly</a></li>
+                      <li><a href="#">Bị bảo vệ</a></li>
+                      <li><a href="#">Giày</a></li>
+                    </ul>
+                    <ul>
+                      <p class="mega_menu_product_category">TRANG SỨC</p>
+                      <li><a href="#">Áo cánh / Áo sơ mi</a></li>
+                      <li><a href="#">Túi xách và Balo</a></li>
+                      <li><a href="#">Khăn quàng cổ và Foulards</a></li>
+                      <li><a href="#">Dệt kim Hats và Gloves</a></li>
+                      <li><a href="#">Vớ và Socks</a></li>
+                      <li><a href="#">Jewerly</a></li>
+                      <li><a href="#">Nước hoa</a></li>
+                      <li><a href="#">Giày</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </li>
+              <li><a href="blog.html">TIN TỨC</a></li>
+              <li><a href="#">BẢN ĐỒ</a></li>
+              <li><a href="contact.html">LIÊN HỆ</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header_right">
+          <nav>
+            <ul class="cart_list">
+              <li class="header_top_cart"><i class="fas fa-sort-up icon_cart_sort_up"></i><a href="shopping_cart.html"><i class="fas fa-shopping-cart"></i>
+                  <div class="number-cart">   <span></span></div></a>
+                <div class="mega_menu_cart">
+                  <nav class="menu_cart">
+                    <ul class="cart_list"></ul>
+                  </nav>
+                  <div class="cart_total">
+                    <p class="cart_total_title">Tổng tiền</p>
+                    <p class="cart_total_price"> </p>
+                  </div><a class="cart_btn" href="shopping_cart.html">XEM GIỎ HÀNG</a>
+                </div>
+              </li>
+              <li class="header_top_search"><a href=""><i class="fas fa-search">     </i></a></li>
+              <li class="icon_menu_open">
+                <label class="fas fa-bars" for="r1"></label>
+              </li>
+              <li class="icon_menu_close">
+                <label class="fas fa-times" for="r2"></label>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <script src="js/all.js"></script>
+    <script src="js/megaMenu-cart.js"></script>
+    <main class="shopping__cart">
+      <div class="wrapper">
+        <section class="path">
+          <div class="path__content">
+                  <ul>
+                    <li><a href="#">Home</a><i class="fal fa-angle-right"></i></li>
+                    <li class="path__content--green"><a href="#">Giỏ hàng</a><i class="fal fa-angle-right disable"></i></li>
+                  </ul>
+          </div>
+        </section>
+        <div class="box__process">
+          <nav>
+            <ul>
+              <li>
+                <div class="process-logo"><i class="fas fa-shopping-cart"></i></div>
+                <div class="process-status"> <i class="fas fa-sync-alt"></i></div>
+                <p>Giỏ hàng</p>
+              </li>
+              <li>
+                <div class="process-logo"><i class="fas fa-file-invoice"></i></div>
+                <div class="process-status"> <i class="fas fa-times"></i></div>
+                <p>Thông tin khách hàng</p>
+              </li>
+              <li>
+                <div class="process-logo"><i class="fas fa-money-bill-wave-alt"></i></div>
+                <div class="process-status"> <i class="fas fa-times"></i></div>
+                <p>Thanh toán</p>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <section class="cart">
+          <div class="box">   
+            <div class="cart__content">
+              <div class="cart__content__title">
+                <h1>GIỎ HÀNG</h1>
+              </div>
+              <div class="cart__content__table">
+                <table>
+                  <thead>
+                    <td>ẢNH</td>
+                    <td>TÊN SẢN PHẨM</td>
+                    <td>ĐƠN GIÁ</td>
+                    <td>SỐ LƯỢNG</td>
+                    <td>TỔNG SỐ</td>
+                    <td>XÓA</td>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+              <div class="cart__content__total">
+                <h4> Tổng tiền: <span class="price"></span></h4>
+              </div>
+              <div class="cart__content__btn">
+                <form class="cart__form" action="">
+                  <button class="buying" type="button">Tiếp tục mua hàng</button>
+                  <button class="delete" type="button">Xóa</button>
+                  <button class="payment" type="button">Tiếp tục</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer_top"> 
+        <div class="wrapper_top">
+          <div class="footer_top_contact">
+            <h4 class="contact_title">LIÊN HỆ VỚI CHÚNG TÔI</h4>
+            <div class="contact_location"><i class="fas fa-map-marker-alt"> </i>
+              <p>Tầng 4, Tòa nhà Hanoi Group Số 442 Đội Cấn, P.Cống Vị, Q. Ba Đình, Hà Nội</p>
+            </div>
+            <div class="contact_device">
+              <div class="contact_device_item"> <i class="fas fa-phone-alt"> </i>
+                <p>(04) 6674 2332</p>
+              </div>
+              <div class="contact_device_item"> <img src="./assets/images/fax.png" alt="Fax image">
+                <p>(04) 3786 8904</p>
+              </div>
+              <div class="contact_device_item">   <i class="fas fa-phone-alt"> </i>
+                <p>(08) 6680 9686</p>
+              </div>
+              <div class="contact_device_item"> <i class="fas fa-envelope"> </i>
+                <p>Support@bizwed.vn</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer_top_content">
+            <nav>
+              <ul class="footer_top_items">
+                <h4 class="footer_top_title">CHUYẾN HÀNG</h4>
+                <li><a href="404.html">Mua sắm trực tuyến</a></li>
+                <li><a href="#">Đến từ chúng tôi gửi đến</a></li>
+                <li><a href="#">Chính sách vận chuyển</a></li>
+                <li><a href="#">Thông tin vận chuyển</a></li>
+              </ul>
+              <ul class="footer_top_items">
+                <h4 class="footer_top_title">HỖ TRỢ</h4>
+                <li><a href="#">Câu chuyện của chúng tôi</a></li>
+                <li><a href="#">Thanh toán an toàn</a></li>
+                <li><a href="#">Tùy chọn vận chuyển</a></li>
+                <li><a href="#">Chính sách vận chuyển</a></li>
+              </ul>
+              <ul class="footer_top_items">
+                <h4 class="footer_top_title">THÔNG TIN</h4>
+                <li><a href="aboutUs.html">Về Chúng Tôi</a></li>
+                <li><a href="#">Điều khoản &amp; Điều kiện</a></li>
+                <li><a href="#">Chính sách riêng tư</a></li>
+                <li><a href="#">Đơn đặt hàng và Returns</a></li>
+              </ul>
+              <ul class="footer_top_items">
+                <h4 class="footer_top_title">MY ACCOUNT</h4>
+                <li><a href="login.html">Đăng nhập</a></li>
+                <li><a href="register.html">Đăng kí</a></li>
+                <li><a href="account.html">Kiểm tra</a></li>
+                <li><a href="shopping_cart.html">Xem giỏ hàng</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="footer_bottom">
+        <div class="wrapper_bottom">
+          <div class="footer_bottom_content">
+            <p>© Copyright 2008-2014 DKT Technology JSC</p><img src="./assets/images/payment.png" alt="payment image">
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    <script src="js/all.js"></script>
+    <script src="js/cart.js"></script>
+  </Body>
+</html>

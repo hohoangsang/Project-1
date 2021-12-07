@@ -1,0 +1,47 @@
+.main__grid{  
+    margin-top: 11vh;
+    margin-bottom: 3rem;
+    .path{
+        max-width: 1200px;
+        margin: auto;
+        @include pathSection($green);
+        margin-bottom: 0;
+        border: none;
+        padding-left: .5rem;
+        padding-right: .5rem;
+    }
+
+    .advertisement{
+        overflow: hidden;
+        img{
+            max-width: 100%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .wrapper{
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 .5rem;
+        .grid{
+            width: 100%;
+            margin: 0;
+            aside{
+                margin-top: 2rem;
+                @import '../layouts/layout_category';
+            }
+            article{
+                margin-top: 2rem;
+                .grid__content__pagination{
+                    @include pagination;
+                    padding-bottom: .1rem;
+                    border-bottom: 1px solid $header-line;
+                }
+                @import '../layouts/layout_grid';
+            }
+        }
+    }
+}

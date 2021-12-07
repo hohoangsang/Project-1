@@ -1,0 +1,191 @@
+@mixin section_center{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin h2{
+    font-weight: bold;
+    font-size: 1rem;
+    padding-bottom: .5rem;
+    margin: 0;
+}
+
+@mixin arrow_showcase_right($color-arrow){
+    font-size: 4rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -5%;
+    color: $color-arrow;
+    z-index: 10;
+}   
+
+@mixin arrow_showcase_left($color-arrow){
+    font-size: 4rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -5%;
+    color: $color-arrow;
+    z-index: 10;
+} 
+
+@mixin showcase_item_child{
+    width: 50%;
+    height: 50%;
+    padding:.2rem;
+    position: relative;
+}
+
+@mixin item_fullSize{
+    width: 100%;
+    height: 100%;
+}
+
+@mixin pathSection($color){
+    padding: 1rem 0;
+            border-bottom: .5px solid $header-line;
+            margin-bottom: 1rem;
+            ul{
+                display: flex;
+                margin: 0;
+                padding: 0;
+            }
+                li{
+                    list-style: none;
+                    font-size: .9rem;
+                    color: black;
+                    a{
+                        text-decoration: none;
+                        color: black;
+                    }
+
+                    i{
+                        margin: 0 .5rem;
+                    }
+                }
+
+                li:last-child{
+                    a{
+                        color: $color;
+                    }
+                    i{
+                        display: none;
+                    }
+                }
+}
+
+@mixin input{
+    width: 80%;
+    border: 1px solid $header-line;
+    outline: none;
+    padding: .3rem;
+    font-size: .9rem;
+}
+
+@mixin pagination{
+    .pagination{
+        display: flex;
+        justify-content: space-between;
+        .pagination__option{
+            display: flex;
+            .pagination__option__grid{
+                font-size: .9rem;
+                margin-right: .5rem;
+                a{
+                    color: $black;
+                    text-decoration: none;
+                }
+            }
+            .pagination__option__list{
+                font-size: .9rem;
+                a{
+                    color: $black;
+                    text-decoration: none;
+                }
+            }
+        }
+        .pagination__num{
+            span{
+                padding: 0 .6rem;
+                margin: 0 .4rem;
+                font-size: .9rem;
+                color: $grey;
+                cursor: pointer;
+            }
+
+            i{
+                cursor: pointer;
+            }
+
+            .active{
+                color: $white;
+                background-color: $green;
+                border-radius: 2px;
+            }
+        }
+    }
+}
+
+@mixin TagBtn{
+    outline: none;
+    background-color: $white;
+    color: $black;
+    border: 1px solid $green;
+    padding: .2rem .5rem;
+    margin-right: .5rem;
+    margin-bottom: .5rem;
+}
+
+@mixin TagBtnHover($bg, $color){
+    background-color: $bg;
+    color: $color;
+}
+
+@mixin checkInput{
+    .fa-check-circle{
+        color: $green;
+        font-size: .9rem;
+        display: none;
+    }
+    .fa-exclamation-circle{
+        color: $red;
+        font-size: .9rem;
+        display: none;
+    }
+}
+
+@mixin processLogo{
+    i{
+        font-size: 2rem;
+        color: $green;
+    }
+}
+
+@mixin processStatus{
+    position: relative;
+    i{
+        background-color: $green;
+        font-size: .8rem;
+        color: $white;
+        border-radius: 50%;
+        width: 1.2rem;
+        height: 1.2rem;
+        padding-top: 4px;
+    }
+    i:after{
+        content: "";
+        background-color: $green;
+        height: 4px;
+        width: 310px;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        z-index: -1;
+    }
+}

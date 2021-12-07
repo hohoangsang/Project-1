@@ -1,0 +1,29 @@
+extends ../layouts/layout_contact
+
+block main
+    main.contactUs  
+        .wrapper
+            include ../variables/contact_variables.pug
+            include ../base/mixins.pug
+            section.path
+                .path__content
+                +listPath(PathContact)  
+            section.contact
+                .box__contact    
+                    .contact__title
+                        h1 LIÊN HỆ
+                    .contact__content.row   
+                        .contact__content__map.col-12.col-md-12.col-lg-6
+                            img(src=contactMap.src, alt=contactMap.alt).img-fluid
+                        .contact__content__form.col-12.col-md-12.col-lg-6
+                            form(action="").form
+                                .contact__content__form__title
+                                    h3 GỬI EMAIL CHO CHÚNG TÔI
+                                .contact__content__form__group
+                                    +formGroup("Tên *", "text", "contactName", "contactName")
+                                    +formGroup("Email *", "email", "contactEmail", "contactEmail")
+                                    .form-group
+                                        label Tin nhắn *
+                                        textarea(rows="7")
+                                .contact__content__form__btn
+                                    button(type = "submit") Gửi

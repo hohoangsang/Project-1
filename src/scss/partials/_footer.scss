@@ -1,0 +1,110 @@
+.footer{
+    background-color: $black;
+    .footer_top{
+        .wrapper_top{
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            padding: 1rem;
+        }
+    }
+    .footer_bottom{
+        border-top: 1px solid $text-footer;
+        padding: 1rem 0;
+        .wrapper_bottom{
+            max-width: 1200px;
+            margin: auto;
+            padding: 1rem;
+            .footer_bottom_content{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                p{
+                    width: fit-content;
+                    margin: auto 0;
+                }
+            }
+        }
+    }
+
+    h4{
+        color: $white;
+        font-size: 1rem;
+        padding: 1rem 0;
+    }
+    p{
+        color: $text-footer;
+        font-size: .8rem;
+        margin-bottom: .5rem;
+    }
+    i{
+        color: $green;
+        font-size: .9rem;
+    }
+}
+
+.footer_top{
+    .footer_top_contact{
+        width: 30%;
+        .contact_location{
+            display: flex;
+            p{
+                padding-left: .4rem;
+                cursor: pointer;
+            }
+            p:hover{
+                font-style: italic;
+                color: $green;
+            }
+        }
+        .contact_device{
+            display: flex;
+            flex-wrap: wrap;
+            .contact_device_item{
+                display: flex;
+                width: 50%;
+                img{
+                    width: 13%;
+                    height: 62%;
+                }
+                p{
+                    padding-left: .4rem;
+                    cursor: pointer;
+                }
+                p:hover{
+                    font-style: italic;
+                    color: $green;
+                }
+            }   
+        }
+    }
+    .footer_top_content{
+        width: 70%;
+        nav{
+            display: flex;
+            justify-content: space-between;
+            .footer_top_items{
+                padding: 0 1rem;
+                li{
+                    list-style: none;
+                    font-size: .8rem;
+                    padding-bottom: .4rem;
+                        a{
+                            text-decoration: none;
+                            color: $text-footer;
+                        }
+                }
+
+                li:hover{
+                    list-style: disc;
+                    color: $green;
+                    margin-left: 1rem;
+                }
+
+                li:hover>a{
+                    color: $green;
+                }
+            }
+        }
+    }
+}

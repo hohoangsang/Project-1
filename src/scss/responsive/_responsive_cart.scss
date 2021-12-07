@@ -1,0 +1,29 @@
+@media screen and (max-width: 700px){
+    .shopping__cart{
+        .cart__content__title{
+            h1{
+                font-size: 1rem !important; 
+            }
+        }
+        thead{
+            td{
+                font-size: .7rem !important;
+            }
+        }
+        tbody{
+            td{
+                padding: 0 !important;
+                font-size: .7rem !important;
+            }
+        }
+
+        .cart__content__btn{
+            .cart__form{
+                button{
+                    font-size: .7rem !important;
+                    padding: .2rem .5rem;
+                }
+            }
+        }
+    }
+}

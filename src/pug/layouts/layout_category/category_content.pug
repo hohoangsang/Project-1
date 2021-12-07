@@ -1,0 +1,19 @@
+.category   
+    .category__content  
+        .category__content__title
+            i.fas.fa-bars
+            h2 DANH MỤC SẢN PHẨM
+        #accordionExample.accordion.accordion-flush.category__content__list
+            each category_list in category
+                -const{title, title_id, collapse, heading, list, category_id} = category_list
+                +category_item(title, title_id, collapse, heading, list, category_id)
+        .categories__compare
+            h2 SO SÁNH SẢN PHẨM
+            p   Bạn chưa có sản phẩm nào đẻ so sánh
+        .categories__tag
+            h2  TAG SẢN PHẨM
+            .categories__tag__btn
+                each item in listBtnTagCategory
+                    button(type= "button")= item
+        .categories__img
+            img(src="./assets/images/grid/mandala-store.jpg", alt="categories__img")

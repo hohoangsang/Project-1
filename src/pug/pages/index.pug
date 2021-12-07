@@ -1,0 +1,125 @@
+extends ../layouts/layout_home.pug
+block main
+    .box
+        section.content_banner.container-fluid
+            .wrapper.row
+                .col-6.col-sm-6.content_banner_left
+                    h2.banner_title GreenVera
+                    p.banner_caption Sản phẩm tinh dầu dưỡng da mới nhất của Mandala
+                    p.banner_price GIÁ CHỈ 750.000<sup>đ</sub>
+                    .banner__orderNow__btn
+                        label(for= "newsletter-toogle-show") MUA HÀNG
+                .col-6.col-sm-6
+        .policy
+            include ../variables/index_variables.pug
+            .wrapper
+                each item in policy_variables
+                    .policy_item
+                        .cover    
+                            img(src= item.image, alt="policy image")
+                            p.policy_item_content= item.content 
+        section.showcase
+            include ../base/mixins.pug
+            .wrapper
+                .showcase_top.row
+                    .showcase_item.col-12.col-sm-6
+                        .showcase_item_product
+                            +showcase_item_product("./assets/images/img8.jpg")
+                        .showcase_item_color(style= "color: white")
+                            +showcase_item_color("fa-caret-left", 'arrow_left', "./assets/images/2.png", "SỮA TẮM")
+                        .showcase_item_color
+                            +showcase_item_color("fa-caret-right", 'arrow_right', "./assets/images/1.png", "NƯỚC HOA")
+                        .showcase_item_product
+                            img(src="./assets/images/img14.jpg", alt="showcase image")
+                            .showcase_item_content
+                                p.showcase_content_date Từ 1/6-5/6/2015
+                                p.showcase_content_discount -40%
+                                a(href="#") MUA HÀNG
+                    .showcase_item.col-12.col-sm-6
+                        img(src="./assets/images/img13.jpg", alt="showcase image").img-fluid
+                        .showcase_item_content
+                            a(href="#").btn_play
+                                i.fas.fa-play
+                        p.corrine CORRINE 2015
+                .showcase_bottom.row
+                    .showcase_item.col-12.col-sm-6
+                        img(src="./assets/images/img10.jpg", alt="showcase image").img-fluid
+                        .showcase_bottom_left
+                            p.content_combo COMBO TẮM TRẮNG
+                            p.content_atHome Tại Nhà
+                    .showcase_item.col-12.col-sm-6
+                        .showcase_item_product
+                            +showcase_item_product("./assets/images/img9.jpg")
+                        .showcase_item_color
+                            +showcase_item_color("fa-caret-right", 'arrow_right', "./assets/images/1.png", "TRANG SỨC")
+                        .showcase_item_color
+                            .color_item
+                            i.fas.fa-caret-left.arrow_left
+                            .showcase_item_content
+                                img(src="./assets/images/daisy.png", alt="showcase image").img_daisy
+                                p.showcase_item_content_text Quyến rũ hơn
+                                p.content_withDaisy DAISY
+                        .showcase_item_product
+                            +showcase_item_product("./assets/images/img11.jpg")
+        section.testimonial
+            .wrapper
+                .testimonial_banner
+                    img(src="./assets/images/testimormial_bg.jpg", alt="testimonial_banner")
+                .testimonial_content.row
+                    .col-lg-8
+                        .carousel.slide#carouselExampleIndicators(data-bs-ride="carousel")
+                            .carousel-indicators.testimonial_indicators
+                                each item, index in testimonial_variables
+                                    if(index === 0)
+                                        button(type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to=item.index).active
+                                    else 
+                                        button(type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to=item.index)
+                            .carousel-inner
+                                each item, index in testimonial_variables
+                                    if (index === 0)
+                                        .carousel-item.active
+                                            +testominial_content_item(item.avatar, item.content, item.name, item.position)
+                                    else    
+                                        .carousel-item
+                                            +testominial_content_item(item.avatar, item.content, item.name, item.position)
+                    .col-lg-4
+        section.slide-product
+            include ../layouts/layout_category/product-layout
+        section.social_media   
+            .wrapper
+                nav.social_content
+                    each item in media_variables
+                        +social_content(item.icon, item.title)               
+        section.main_bottom
+            .wrapper.container-fluid
+                .main_bottom_content.row
+                    .main_bottom_about.col-12.col-sm-6.col-md-6.col-lg-4
+                        +main_bottom_title(about_us.title, about_us.line, about_us.alt)
+                        br
+                        img(src= about_us.logo, alt= about_us.alt)
+                        p.caption= about_us.caption
+                        p.about_content= about_us.content
+                        a(href="#").about_readmore= about_us.readmore
+                    .main_bottom_blog.col-12.col-sm-6.col-md-6.col-lg-4
+                        +main_bottom_title(blog.title, blog.line, blog.alt)
+                        img(src= blog.banner, alt= blog.alt).blog_banner
+                        p.caption= blog.caption
+                        p.blog_content= blog.content
+                        p.blog_author= blog.author
+                        .blog_box
+                            a(href="#").blog_readmore= blog.readmore
+                                i.fas.fa-chevron-right
+                            p.blog_comment= blog.comment
+                    .main_bottom_mixture.col-12.col-sm-12.col-md-12.col-lg-4   
+                        .main_bottom_contact
+                            +main_bottom_title(email.title, email.line, email.alt)
+                            form(action="").contact_form
+                                input(type="email" placeholder = "Email của bạn" checked)
+                                p Gửi email để nhận được những ưu đãi mới nhất
+                                button(type="submit") Gửi
+                        .main_bottom_tag_product
+                            +main_bottom_title(tag_product.title, tag_product.line, tag_product.alt)
+                            -const products = tag_product.product
+                            .list_product
+                                each product in products
+                                    a(href="#")= product

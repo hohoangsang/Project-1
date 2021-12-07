@@ -1,0 +1,19 @@
+extends ../layouts/layout_404
+
+block main
+    main.main_404
+        .wrapper
+            section
+                .notFound__content
+                    .notFound__content__img
+                        img(src="./assets/images/404-page/notfound.png", alt="404 image")
+                    .notFound__content__notification
+                        h2 Đây không phải trang web bạn đang tìm kiếm
+                        form(action="")
+                            .notFound__content__notification__search
+                                input(type="text")
+                                i.fas.fa-search
+                        .notFound__content__btn
+                            a.btn-contact(href="contact.html") LIÊN HỆ
+                            a.btn-home(href="index.html") TRANG CHỦ
+                    

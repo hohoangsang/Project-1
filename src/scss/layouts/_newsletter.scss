@@ -1,0 +1,58 @@
+.newsletter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .newsletter__content {
+        width: 600px;
+        height: 600px;
+        background-image: url("../assets/images/bg-popup.jpg");
+        background-position: center;
+        background-size: cover;
+        border-radius: 50%;
+        text-align: center;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: .8rem;
+            color: $grey;
+            margin: 0;
+        }
+
+        form{
+            margin: 1.5rem 0;
+            input {
+                display: block;
+                width: 20rem;
+                border-radius: 25px;
+                outline: none;
+                border: 1px solid $header-line;
+                font-size: .8rem;
+                padding: .3rem .5rem;
+                margin: auto;
+                color: $grey;
+            }
+        }
+
+        a{
+            color: $black;
+        }
+
+        .newsletter__content__icon {
+            position: absolute;
+            top: -70px;
+            img {
+                cursor: pointer;
+            }
+        }
+    }
+}

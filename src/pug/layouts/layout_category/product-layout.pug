@@ -1,0 +1,26 @@
+.product
+    .box    
+        .product__title
+            .product__title__name
+                .product__title__name--new Sản phẩm mới
+                .product__title__name--hot Sản phẩm bán chạy
+                .product__title__name--special Sản phẩm đặc biệt
+            .product__title__underline
+                img(src="../assets/images/3.png", alt="product title underline")
+            .product__title__menu
+                nav 
+                    ul
+                        each item in listMenuProduct
+                            li
+                                a(href="#")= item
+
+        .product__item
+            figure
+                input(type="radio" name="c" id= "c1" checked )
+                input(type="radio" name="c" id= "c2")
+                each item in ProductItem    
+                    +product-item(item.img, item.title, item.oldPrice, item.show)
+                .product__items--arrow-right
+                    label(for="c2").fas.fa-arrow-right
+                .product__items--arrow-left
+                    label(for="c1").fas.fa-arrow-left

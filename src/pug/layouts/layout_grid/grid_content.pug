@@ -1,0 +1,13 @@
+section
+    .wrapper
+        .grid.row
+            aside.col-12.col-md-12.col-lg-3 
+                include ../layout_category/category_content
+            article.col-12.col-md-12.col-lg-9
+                .grid__content  
+                    .grid__content__pagination
+                        +pagination
+                    .grid__content__product#category
+                        //- each item in gridProduct
+                        //-     +grid-product(item.className, item.img, item.title, item.oldPrice, item.show)
+

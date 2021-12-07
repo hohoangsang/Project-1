@@ -1,0 +1,25 @@
+extends ../layouts/layout_list_product
+
+block main
+    main.main__list
+        include ../variables/product_variables.pug
+        include ../base/mixins.pug
+        section.path
+            .path__content
+                +listPath(PathGrid)
+        section.advertisement
+            img(src="./assets/images/grid/bg-discount1.jpg", alt="banner product")
+        section
+            .wrapper
+                .list.row
+                    aside.col-12.col-md-12.col-lg-3 
+                        include ../layouts/layout_category/category_content
+                    article.col-12.col-md-12.col-lg-9
+                        .list__content  
+                            .list__content__pagination
+                                +pagination
+                            .list__content__product
+                                each item in ListProduct
+                                    +list-product(item.image, item.title, item.price)
+                            .list__content__pagination
+                                +pagination  

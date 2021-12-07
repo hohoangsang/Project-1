@@ -1,0 +1,65 @@
+extends ../layouts/layout_infomation
+
+block main
+    main.information    
+        include ../base/mixins.pug
+        include ../variables/information_variables.pug
+        .wrapper    
+            section.path
+                .path__content
+                    +listPath(PathInformation)
+            
+            .box__process
+                nav
+                    ul
+                        each item in infoProcess
+                            li
+                                .process-logo
+                                    i.fas(class= item.logo)
+                                .process-status 
+                                    i.fas(class= item.status)
+                                p= item.title
+
+            section.content.row
+                .information-checkout.col-lg-9
+                    .box
+                        .information-checkout__content
+                            .information-checkout__content__title.title-content
+                                h1 THÔNG TIN THANH TOÁN
+                            .information-checkout__content__form.form
+                                form#formCheckout(name="infoForm" action = "#")
+                                    +formGroup("Họ và Tên *", "text", "name", "inputName", "errorName", "Ví dụ: Nguyễn Văn A")
+                                    +formGroup("Địa chỉ *", "text", "address", "inputAddress", "errorAddress", "Ví dụ: 16 Lý Thường Kiệt")
+                                    +formGroup("Email *", "email", "email", "inputEmail", "errorEmail", "Ví dụ: nguyenvana@gmail.com")
+                                    +formGroup("Số điện thoại *", "telephone", "telephone", "inputTelephone", "errorTelephone", "Ví dụ: 0502346125")
+                                    .infomation-checkout_form_btn
+                                        a(href="shopping_cart.html") Quay lại Giỏ hàng
+                                        button(type = "submit").continue Tiếp tục  
+
+                .information-cart.col-lg-3
+                    .box
+                        .information-cart__content
+                            .information-cart__content__title
+                                h2 Danh sách sản phẩm
+                            .information-cart__content__list-product  
+                                //- .information-cart__content__list-product--item
+                                //-     .list-product--item__img
+                                //-         img(src= "./assets/images/grid/product1.jpg", alt="")
+                                //-     .list-product--item__info
+                                //-         a(href="#").item__info__name Mỹ phẩm Châu Âu
+                                //-         p.item__info__number Số lượng: 
+                                //-             span 1
+                                //-         p.item__info__price 335000
+                                //-             sup đ
+                                //- .information-cart__content__list-product--item
+                                //-     .list-product--item__img
+                                //-         img(src= "./assets/images/grid/product1.jpg", alt="")
+                                //-     .list-product--item__info
+                                //-         a(href="#").item__info__name Mỹ phẩm Châu Âu
+                                //-         p.item__info__number Số lượng: 
+                                //-             span 1
+                                //-         p.item__info__price 335000
+                                //-             sup đ
+                            .information-cart__content__list-product--total
+                                p.list-product--total__price Tổng tiền: 
+                                    span

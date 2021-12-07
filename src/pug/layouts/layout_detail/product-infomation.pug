@@ -1,0 +1,21 @@
+.info-product
+    .box.row
+        article.col-lg-9 
+            .info-product__title
+                each item in listInfoProduct
+                    a(href="#" class= item.className)= item.title
+            .info-product__content
+                each item in infoContent
+                    +info-content(item.src)
+        aside.col-lg-3
+            .info-product__topSelling
+                h3 SẢN PHẨM BÁN CHẠY
+                +top-selling
+                +top-selling
+                +top-selling
+            .info-product__topSelling
+                h3 SẢN PHẨM MUA NHIỀU
+                +top-selling
+                +top-selling
+                +top-selling
+                +top-selling

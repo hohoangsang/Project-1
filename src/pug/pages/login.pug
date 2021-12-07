@@ -1,0 +1,28 @@
+extends ../layouts/layout_login
+
+block main
+    main.login
+        include ../variables/login_variables.pug
+        include ../base/mixins.pug
+        .wrapper
+            section.path
+                .path__content
+                +listPath(PathLogin)  
+            section.login__box
+                .login__content
+                    .login__content__top
+                        .login__content__top__title
+                            h1 ĐĂNG NHẬP
+                        .login__content__top__registerBtn
+                            a(href="register.html")
+                                | ĐĂNG KÝ
+                    .login__content__bottom.row
+                        .login__content__bottom__form
+                            form(action="").col-md-6.col-lg-6 
+                                h3 KHÁCH HÀNG ĐĂNG KÝ
+                                P Nếu bạn có một tài khoản, xin vui lòng đăng nhập
+                                +formGroup("Địa chỉ email *", "email", "emailLogin", "emailLogin")
+                                +formGroup("Password *", "password", "passwordLogin", "passwordLogin")
+                                .form__Btn
+                                    a(href="#") Quên mật khẩu?
+                                    button(type = "submit") ĐĂNG NHẬP

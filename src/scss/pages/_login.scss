@@ -1,0 +1,103 @@
+.login{  
+    margin-top: 11vh;
+    margin-bottom: 3rem;
+    .wrapper{
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 .5rem;
+        .path{
+            @include pathSection($green);
+            margin-bottom: 0;
+        }
+
+        .login__box{
+            .login__content__top{
+                display: flex;
+                justify-content: space-between;
+                align-items: baseline;
+                .login__content__top__title{
+                    h1{
+                        font-size: 1.5rem;
+                        margin: 2rem 0;
+                        font-weight: bold;
+                    }
+                }
+                .login__content__top__registerBtn{
+                    a{
+                        text-decoration: none;
+                        background-color: $black;
+                        color: white;
+                        border: 1px solid $black;
+                        padding: .5rem 1rem;
+                        font-size: .9rem;
+                    }
+
+                    a:hover{
+                        font-weight: bold;
+                        color: $green;
+                        background-color: $white;
+                        border: 1px solid $green;
+                    }
+                }
+            }
+
+            .login__content__bottom{
+                width: 100%;
+                margin: 0;
+                .login__content__bottom__form{
+                    width: 100%;
+                    background-color: $thead-bg;
+                    padding: 2.5rem 3rem;
+                    h3{
+                        font-size: 1.2rem;
+                        font-weight: bold;
+                    }
+                    p{
+                        font-size: .9rem;
+                    }
+                    .form-group{
+                        width: 100%;
+                        label{
+                            font-size: .9rem;
+                            font-weight: bold;
+                            margin: .8rem 0;
+                        }
+                        input{
+                            width: 100%;
+                            border: 1px solid $header-line;
+                            outline: none;
+                            padding: .3rem;
+                            font-size: .9rem;
+                        }
+                        @include checkInput;
+                    }
+
+                    .form__Btn{
+                        display: flex;
+                        align-items:  baseline;
+                        margin: 2rem 0;
+                        a{
+                            color: $black;
+                            text-decoration: none;
+                            font-size: .9rem;
+                        }
+    
+                        a:hover{
+                            color: $green;
+                        }
+
+                        button{
+                            background-color: $black;
+                            color: white;
+                            outline: none;
+                            border: 1px solid $black;
+                            padding: .5rem 1rem;
+                            font-size: .9rem;
+                            margin-left: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

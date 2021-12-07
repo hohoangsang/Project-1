@@ -1,0 +1,68 @@
+include ../variables/header_variables.pug
+
+header.header   
+    .overlay
+    .wrapper.container-fluid
+        .header_left.header_logo
+            a(href="index.html")
+                img(src="assets/images/mandala-logo.png", alt="mandala-logo")
+        input(type="radio" name="r" id="r1")
+        input(type="radio" name='r' id="r2")
+        .header_middle.header_menu
+            nav
+                ul
+                    each item,index in header_menu
+                        if (index === 2)
+                            li
+                                a(href=item.href)= item.title
+                                i.far.fa-chevron-down 
+                                i.fas.fa-sort-up.icon_sort_up
+                                .mega_menu_product
+                                    nav
+                                        each product_list in mega_menu_product
+                                            -const { title, items } = product_list
+                                                ul
+                                                    p.mega_menu_product_category= title
+                                                    each item in items
+                                                        li
+                                                            a(href="#")= item
+                        else 
+                            li
+                                a(href=item.href)= item.title
+                        
+        .header_right
+            nav
+                ul.cart_list
+                    li.header_top_cart
+                        i.fas.fa-sort-up.icon_cart_sort_up
+                        a(href="shopping_cart.html")
+                            i.fas.fa-shopping-cart
+                            .number-cart    
+                                span
+                        .mega_menu_cart
+                            nav.menu_cart
+                                ul.cart_list
+                                    //- each product in mega_menu_cart
+                                    //-     li.cart_item
+                                    //-         .cart_client_avatar
+                                    //-             img(src= product.avatar, alt="product avatar")
+                                    //-         .cart_item_info
+                                    //-             p.cart_product_name= product.product_name
+                                    //-             p.cart_product_price= product.product_price
+                                    //-                 sup đ
+                                    //-         .cart_icon_delete
+                                    //-             i.fas.fa-times.icon_delete
+                            .cart_total
+                                p.cart_total_title Tổng tiền
+                                p.cart_total_price 
+                            a(href="shopping_cart.html" class = "cart_btn") XEM GIỎ HÀNG
+                    li.header_top_search
+                        a(href="")
+                            i.fas.fa-search      
+                    li.icon_menu_open
+                        label(for="r1").fas.fa-bars
+                    li.icon_menu_close
+                        label(for="r2").fas.fa-times
+
+script(src="js/all.js")
+script(src="js/megaMenu-cart.js")

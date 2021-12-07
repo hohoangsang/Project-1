@@ -1,0 +1,22 @@
+extends ../layouts/layout_blog
+
+block main
+    main.blog
+        include ../variables/blog_variables.pug
+        include ../base/mixins.pug
+        .wrapper
+            section.path
+                .path__content
+                +listPath(PathBlog) 
+            section
+                .blog__box
+                    .blog__title
+                        h1 BLOG
+                    .blog__content
+                        .blog__conntent__pagination 
+                            +pagination
+                        .blog__content__post.row
+                            each item in PostItem
+                                +blog-item(item.img, item.className)
+                        .blog__conntent__pagination 
+                            +pagination

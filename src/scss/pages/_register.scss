@@ -1,0 +1,76 @@
+.register{  
+    margin-top: 11vh;
+    margin-bottom: 3rem;
+    .wrapper{
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 .5rem;
+        .path{
+            @include pathSection($green);
+            margin-bottom: 0;
+        }
+
+        .register__box{
+            .register__content{
+                width: 100%;
+                margin: 0;
+                .register__content__title{
+                    h1{
+                        font-size: 1.5rem;
+                        margin: 2rem 0;
+                        font-weight: bold;
+                    }
+                }
+
+                .register__content__form{
+                    width: 100%;
+                    background-color: $thead-bg;
+                    padding: 2.5rem 3rem;
+                    h3{
+                        font-size: 1.2rem;
+                        font-weight: bold;
+                    }
+                    .form-group{
+                        label{
+                            font-size: .9rem;
+                            font-weight: bold;
+                            margin: .8rem 0;
+                        }
+                        input{
+                            width: 100%;
+                            border: 1px solid $header-line;
+                            outline: none;
+                            padding: .3rem;
+                            font-size: .9rem;
+                        }
+                        @include checkInput;
+                    }
+                    .register__content__form__notification{
+                        display: flex;
+                        align-items: baseline;
+                        margin-top: 1rem;
+                        margin-bottom: 3rem;
+                        .notification_text{
+                            margin-left: .5rem;
+                            font-size: .9rem;
+                            margin-bottom: 0;
+                        }
+                    }
+                    .register__content__form__btn{
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 2rem;
+                        button{
+                            background-color: $black;
+                            color: white;
+                            outline: none;
+                            border: 1px solid $black;
+                            padding: 0 .6rem;
+                            font-size: .9rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

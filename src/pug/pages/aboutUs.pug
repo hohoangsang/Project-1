@@ -1,0 +1,28 @@
+extends ../layouts/layout_aboutUs
+
+block main
+    main.about
+        include ../variables/aboutUs_variables.pug
+        include ../base/mixins.pug
+        .wrapper
+            section.path
+                .path__content
+                +listPath(PathAboutUs) 
+            section.about__us
+                .box__about     
+                    .about__title
+                            h1 VỀ CHÚNG TÔI
+                    .about__content.row
+                        .about__content__left.col-lg-6
+                            img(src="./assets/images/img-about.jpg", alt="about image").img-fluid
+                        .about__content__right.col-lg-6
+                            img(src=AboutContent.image, alt= AboutContent.alt)
+                            h3= AboutContent.title
+                            p= AboutContent.content
+                            .about__content__right__readmore
+                                input(type="radio" id = "c1" name = "c")
+                                input(type="radio" id = "c2" name = "c")
+                                label(for="c1").showBtn Xem thêm
+                                .toogle__content
+                                    p.readmoreContent= AboutContent.readmoreContent
+                                    label(for="c2").hideBtn Ẩn bớt

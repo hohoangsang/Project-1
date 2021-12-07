@@ -1,0 +1,14 @@
+extends ../layouts/layout_detail_product
+
+block main
+    main.main__detail-product
+        include ../variables/product_variables.pug
+        include ../base/mixins.pug
+        .wrapper    
+            section.path
+                .path__content
+                +listPath(PathDetail) 
+            //- Detail Product
+            include ../layouts/layout_detail/product-detail
+            //- Infomation Product  
+            include ../layouts/layout_detail/product-infomation

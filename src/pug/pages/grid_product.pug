@@ -1,0 +1,12 @@
+extends ../layouts/layout_grid_product
+
+block main
+    main.main__grid
+        include ../variables/product_variables.pug
+        include ../base/mixins.pug
+        section.path
+            .path__content
+                +listPath(PathGrid)
+        section.advertisement
+            img(src="./assets/images/grid/bg-discount1.jpg", alt="banner product")
+        include ../layouts/layout_grid/grid_content

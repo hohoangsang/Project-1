@@ -1,0 +1,18 @@
+extends ../base/base
+
+block script
+    script(src="js/all.js")
+
+block content
+    input(type="radio" id= "newsletter-toogle-show" name= "toggle")
+    input(type="radio" id= "newsletter-toogle-hide" name= "toggle")
+    .newsletter-popup__overlay
+        include ./newsletter
+    .box
+        //- Header
+        include ../partials/header
+        //- content
+        main.main
+            block main
+        //- Footer
+        include ../partials/footer

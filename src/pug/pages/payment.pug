@@ -1,0 +1,60 @@
+extends ../layouts/layout_payment
+
+block main
+    main.payment
+        include ../base/mixins.pug
+        include ../variables/information_variables.pug
+        .wrapper    
+            section.path
+                .path__content
+                    +listPath(PathPayment)
+            
+            .box__process
+                nav
+                    ul
+                        each item in paymentProcess
+                            li
+                                .process-logo
+                                    i.fas(class= item.logo)
+                                .process-status 
+                                    i.fas(class= item.status)
+                                p= item.title
+
+            section
+                .payment-complete
+                    .box
+                        .payment-complete__content
+                            .payment-complete__content__title
+                                h1 HOÀN THÀNH THANH TOÁN
+                            .payment-complete__content__info
+                                .payment-complete__content__info__customer
+                                    h4 Thông tin khách hàng
+                                    +customer("Tên khách hàng: ", "customer-name")
+                                    +customer("Địa chỉ: ", "customer-address")
+                                    +customer("Email: ", "customer-email")
+                                    +customer("Số điện thoại: ", "customer-phone")
+                                .payment-complete__content__info__payment--option
+                                    .payment__option__title 
+                                        h4 Chọn phương thức thanh toán
+                                    .payment__option__form
+                                        form(action="")
+                                            each item in paymentOption
+                                                .form-check
+                                                    input(id= item.inputId).form-check-input(type='radio' name='flexRadioDefault')
+                                                    label.form-check-label(for= item.inputId)
+                                                        img(src= item.img, alt="payment option")
+                                                        =item.title
+                                        span.errPayment
+
+                            .payment-complete__content__info__product
+                                table
+                                    thead
+                                        each item in listTableInfomation    
+                                            td= item
+                                    tbody
+                                .payment-complete__content__info__product__total
+                                    h4 Tổng cộng: 
+                                        span.price
+                                .payment-complete__content__info__product__btn
+                                    button.back-info(type="button" onclick= "onBackInfoPage()") Quay lại trang thông tin
+                                    button.checkout(type= "button" onclick= "onCheckout()") Thanh toán

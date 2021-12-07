@@ -1,0 +1,21 @@
+@media screen and (max-width: 1000px){
+    .contactUs{
+        img{
+            width: 100% !important;
+        }
+    }
+}
+
+@media screen and (max-width: 600px){
+    .contactUs{
+        h1{
+            font-size: 1.2rem !important;
+        }
+        h3{
+            font-size: 1rem !important;
+        }
+        label{
+            font-size: .7rem !important;
+        }
+    }
+}

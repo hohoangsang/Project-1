@@ -1,0 +1,38 @@
+section
+    .box
+        .detail.row
+            .detail__img-involve.col-2.col-lg-1
+                i.fas.fa-arrow-up
+                .detail__img-involve__related
+                    each item in imgInvolve
+                        img.related--img(src=item.src, alt=item.alt)
+                i.fas.fa-arrow-down
+            .detail__img-main.col-10.col-lg-6
+                img(src="./assets/images/detail/img4.jpg", alt="image main")
+            .detail__info.col-12.col-lg-5
+                .detail__info__content
+                    h3 LẮC TAY TYFFANY XU HƯỚNG MỚI NHẤT
+                    h5 TYFFANY MS 3201
+                    .detail__info__price.detail-price
+                        span 955.000đ
+                        small 999.000đ
+                    p Không thể phủ nhận, thời trang và phong cách chính là "tuyên ngôn" không lời mạnh mẽ nhất của mỗi người phụ nữ. 
+                        | Do đó việc mua sắm thời trang trở thành niềm vui, và có khi là nguồn cảm hứng vô tận để phái đẹp sống vui,
+                        | sống đẹp hơn trong mắt nửa còn lại của thế giới. Để F5 tủ đồ của mình trước xu hướng ngày càng đa dạng hơn trong thế giới thời trang,
+                        | nhiều chị em không ngần ngại chi tiêu "mạnh tay" để sở hữu những món đồ yêu thích.
+                    h4 MÀU SẮC
+                    .detail__info__color.item-input
+                        input(type="text" placeholder="Màu Bạc")
+                        i.fas.fa-caret-right
+                    h4 SIZE
+                    .detail__info__quantity.item-input
+                        input(type="text" placeholder="12")
+                        i.fas.fa-caret-right
+                    h4 SỐ LƯỢNG
+                .detail__info__btn
+                    include ../../base/add-to-cart.pug
+                .detail__info__social
+                    p Shipping &amp; 
+                        span Returns
+                    .detail__info__social__content
+                        img(src="./assets/images/detail/socials.jpg", alt="social media")

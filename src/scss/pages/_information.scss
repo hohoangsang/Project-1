@@ -1,0 +1,169 @@
+.information{
+    margin-top: 11vh;
+    margin-bottom: 3rem;
+    .wrapper{
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 .5rem;
+        .path{
+            @include pathSection($green);
+        }
+
+        .box__process{
+            nav{
+                ul{
+                    text-align: center;
+                    li{
+                        display: inline-block;
+                        width: 300px;
+                        .process-logo{
+                            @include processLogo;
+                        }
+                        .process-status {
+                            @include processStatus;
+                        }
+                        p{
+                            color: $green;
+                            margin: 0;
+                        }
+                    }
+                    li:nth-child(3){
+                        .process-logo{
+                            i{
+                                font-size: 2rem;
+                                color: $grey;
+                            }
+                        }
+                        .process-status {
+                            i{
+                                background-color: $grey;
+                                font-size: .8rem;
+                                color: $white;
+                            }
+                            i:after{
+                                background-color: $grey;
+                            }
+                        }
+                        p{
+                            color: $grey;
+                        }
+                    }
+                    li:first-child{
+                        i:after{
+                            width: 155px;
+                            left: 150px;
+                        }
+                    }
+                    li:last-child{
+                        i:after{
+                            width: 155px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .content{
+        .information-checkout{
+            margin-top: 1rem;
+            .information-checkout__content{
+                .information-checkout__content__title{
+                    width: 100%;
+                    border-bottom: 1px solid $header-line;
+                    h1{
+                        font-size: 1.5rem;
+                        font-weight: bold;
+                    }
+                }
+                .form{
+                    .form-group{
+                        margin: .3rem 0;
+                        label{
+                            font-size: .9rem;
+                            margin-bottom: .3rem;
+                        }
+                        input{
+                            @include input;
+                            display: flex;
+                            justify-content: flex-end;
+                        }
+                        @include checkInput;
+                        .error-message{
+                            display: block;
+                            color: red;
+                            font-style: italic;
+                            font-size: .8rem;
+                        }
+                    }
+                    .infomation-checkout_form_btn{
+                        margin-top: 1rem;
+                        a, button{
+                            outline: none;
+                            text-decoration: none;
+                            color: $white;
+                            background-color: $green;
+                            padding: .3rem .4rem;
+                            border: none;
+                        }
+                    }
+                }
+            }
+        }
+        .information-cart{
+            margin-top: 1rem;
+            .information-cart__content{
+                .information-cart__content__title{
+                    width: 100%;
+                    border-bottom: 1px solid $header-line;
+                    h2{
+                        font-size: 1.5rem;
+                        font-weight: bold;
+                    }
+                }
+                .information-cart__content__list-product{
+                    height: 40vh;
+                    overflow: auto;
+                    margin-top: 1rem;
+                    .information-cart__content__list-product--item{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .list-product--item__img{
+                            width: 40%;
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        .list-product--item__info{
+                            width: 60%;
+                            margin-left: 1rem;
+                            a,p{
+                                text-decoration: none;
+                                font-size: .9rem;
+                                color: $black;
+                                font-style: italic;
+                                margin-bottom: 0;
+                            }
+                            .item__info__price{
+                                font-family: 'Lobster', cursive;
+                            }
+                        }
+                    }
+                }
+                .information-cart__content__list-product--total{
+                    border-top: 1px solid $header-line;
+                    padding-top: 1rem;
+                    .list-product--total__price{
+                        font-size: .9rem;
+                        font-style: italic;
+                        span{
+                            font-style: normal;
+                            font-family: 'Lobster', cursive;
+                            color: $green;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

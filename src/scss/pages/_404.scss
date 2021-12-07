@@ -1,0 +1,62 @@
+.main_404{
+    margin-top: 11vh;
+    margin-bottom: 3rem;
+    .wrapper{
+        @include section_center;
+        .notFound__content{
+            img{
+                background-image: url("../assets/images/404-page/bg-404.jpg");
+                background-size: cover;
+                background-position: center;
+                display: flex;
+                justify-content: center;
+                width: 50%;
+                margin: auto;
+            }
+        }
+        .notFound__content__notification{
+            h2{
+                text-align: center;
+                color: $grey;
+                font-size: 1.2rem;
+                margin: 2rem;
+            }
+            form{
+                position: relative;
+                input{
+                    width: 40%;
+                    border-radius: 30px;
+                    outline: none;
+                    margin: auto;
+                    border: 1px solid $header-line;
+                    padding: .4rem 1rem;
+                    font-size: .9rem;
+                    display: flex;
+                    justify-content: center;
+                }
+                i{
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 66%;
+                }
+            }
+            .notFound__content__btn{
+                width: fit-content;
+                margin: 1.5rem auto;
+                a{
+                    text-decoration: none;
+                    color: $grey;
+                    padding: 0 1.5rem;
+                    font-size: .9rem;
+                }
+                a:hover{
+                    color: $green;
+                }
+                a:first-child{
+                    border-right: 1px solid $header-line;
+                }
+            }
+        }
+    }
+}

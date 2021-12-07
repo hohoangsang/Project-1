@@ -1,0 +1,22 @@
+.item-buying{
+    display: flex;
+    justify-content: center;
+    button, a{
+        border: 1px solid $header-line;
+        color: $black;
+        font-weight: bold;
+        font-size: .9rem;
+        padding: .4rem .8rem;
+        border-radius: 10px;
+        outline: none;
+        background-color: $white;
+        margin: 0 .3rem;
+        transform: scale(0);
+    }
+
+    button:hover, a:hover{
+        border: 1px solid $green;
+        color: $white;
+        background-color: $green;
+    }
+}

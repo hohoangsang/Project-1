@@ -1,0 +1,41 @@
+extends ../layouts/layout_shopping_cart
+
+block main
+    main.shopping__cart
+        include ../variables/cart_variables.pug
+        include ../base/mixins.pug
+        .wrapper
+            section.path
+                .path__content
+                    +listPath(PathCart)
+            .box__process
+                nav
+                    ul
+                        each item in cartProcess
+                            li
+                                .process-logo
+                                    i.fas(class= item.logo)
+                                .process-status 
+                                    i.fas(class= item.status)
+                                p= item.title
+            section.cart
+                .box    
+                    .cart__content
+                        .cart__content__title
+                            h1 GIỎ HÀNG
+                        .cart__content__table
+                            table
+                                thead
+                                    each item in listThTable
+                                        td= item
+                                tbody
+                                    //- +tableCart("./assets/images/product.jpg", "1", "345.000")
+                                    //- +tableCart("./assets/images/product.jpg", "2", "690.000")
+                        .cart__content__total
+                            h4  Tổng tiền: 
+                                span.price
+                        .cart__content__btn
+                            form(action="").cart__form
+                                button.buying(type= "button") Tiếp tục mua hàng
+                                button.delete(type= "button") Xóa
+                                button.payment(type= "button") Tiếp tục

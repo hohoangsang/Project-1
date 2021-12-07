@@ -1,0 +1,159 @@
+.payment{
+    margin-top: 11vh;
+    margin-bottom: 3rem;
+    .wrapper{
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 .5rem;
+        .path{
+            @include pathSection($green);
+        }
+
+        .box__process{
+            nav{
+                ul{
+                    text-align: center;
+                    li{
+                        display: inline-block;
+                        width: 300px;
+                        .process-logo{
+                            @include processLogo;
+                        }
+                        .process-status {
+                            @include processStatus;
+                        }
+                        p{
+                            color: $green;
+                            margin: 0;
+                        }
+                    }
+                    li:first-child{
+                        i:after{
+                            width: 155px;
+                            left: 150px;
+                        }
+                    }
+                    li:last-child{
+                        i:after{
+                            width: 155px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .payment-complete{
+            .box{
+                .payment-complete__content{
+                    .payment-complete__content__title{
+                        margin-bottom: 1rem;
+                        border-bottom: 1px solid $header-line;
+                        h1{
+                            font-size: 1.5rem;
+                        }
+                    }
+                    .payment-complete__content__info{
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 1rem;
+                        h4{
+                            font-size: 1.2rem;
+                            font-weight: bold;
+                            margin-bottom: 1rem;
+                        }
+                        .payment-complete__content__info__customer{
+                            .customer-item{
+                                font-size: 1rem;
+                                margin-left: 1rem;
+                            }
+                        }
+                        .payment-complete__content__info__payment--option{
+                            .payment__option__form{
+                                .errPayment{
+                                    font-size: .9rem;
+                                    font-style: italic;
+                                    color: $red;
+                                }
+                            }
+                        }
+                    }
+                }
+                .payment-complete__content__info__product{
+                    table{
+                        width: 100%;
+                        thead{
+                            background-color: $thead-bg;
+                            td{
+                                border: 1px solid $header-line;
+                                font-size: .9rem;
+                                text-align: center;
+                                padding: .5rem 0;
+                                font-weight: 600;
+                            }
+        
+                            td:first-child{
+                                width: 15%;
+                            }
+                        }
+        
+                        tbody{
+                            td{
+                                border: 1px solid $header-line;
+                                font-size: .9rem;
+                                text-align: center;
+                                padding: 2rem 0;
+                                img{
+                                    width: 40%;
+                                }
+                            }
+        
+                            td:nth-child(3){
+                                font-style: italic;
+                                font-weight: bold;
+                            }
+        
+                            td:nth-child(4){
+                                p{
+                                    border: 1px solid $header-line;
+                                    padding: .3rem .5rem;
+                                    width: fit-content;
+                                    margin: auto;
+                                }
+                            }
+        
+                            td:nth-child(5){
+                                font-style: italic;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                    .payment-complete__content__info__product__total{
+                        margin: 1rem 0;
+                        h4{
+                            text-align: right;
+                            font-size: 1.2rem;
+                            .price{
+                                font-family: 'Lobster', cursive;
+                                color: $green;
+                            }
+                        }
+                    }
+                }
+                .payment-complete__content__info__product__btn{
+                    display: flex;
+                    justify-content: flex-end;
+                    button{
+                        background-color: $green;
+                        color: white;
+                        outline: none;
+                        padding: .3rem .8rem;
+                        border: none;
+                        font-size: .9rem;
+                        margin-right: .5rem;
+                        height: fit-content;
+                    }
+                }
+            }
+        }
+    }
+}

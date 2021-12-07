@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mandala</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <Body>
+    <input type="radio" id="newsletter-toogle-show" name="toggle">
+    <input type="radio" id="newsletter-toogle-hide" name="toggle">
+    <div class="newsletter-popup__overlay">
+      <div class="newsletter">
+        <div class="newsletter__content">
+          <div class="newsletter__content__icon">
+            <label for="newsletter-toogle-hide"><img src="./assets/images/closepopup.png"></label>
+          </div>
+          <h3>GỬI EMAIL</h3>
+          <p>Hãy gửi email của bạn liên hệ với chúng tôi để được tư vấn tốt hơn</p>
+          <p>Sự hài lòng của bạn là thành công của chúng tôi</p>
+          <form action="">
+            <input type="text" placeholder="Email của bạn...">
+          </form><a href="#">GỬI EMAIL  </a>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <header class="header">  
+        <div class="overlay"></div>
+        <div class="wrapper container-fluid">
+          <div class="header_left header_logo"><a href="index.html"><img src="assets/images/mandala-logo.png" alt="mandala-logo"></a></div>
+          <input type="radio" name="r" id="r1">
+          <input type="radio" name="r" id="r2">
+          <div class="header_middle header_menu">
+            <nav>
+              <ul>
+                <li><a href="index.html">TRANG CHỦ</a></li>
+                <li><a href="aboutUs.html">GIỚI THIỆU</a></li>
+                <li><a href="grid_product.html">SẢN PHẨM</a><i class="far fa-chevron-down"> </i><i class="fas fa-sort-up icon_sort_up"></i>
+                  <div class="mega_menu_product">
+                    <nav>
+                      <ul>
+                        <p class="mega_menu_product_category">DƯỠNG DA</p>
+                        <li><a href="#">Áo khoác</a></li>
+                        <li><a href="#">Bộ áo liền quần</a></li>
+                        <li><a href="#">Dresses</a></li>
+                        <li><a href="#">Quần / Váy</a></li>
+                        <li><a href="#">Quần short</a></li>
+                        <li><a href="#">Quần jean</a></li>
+                        <li><a href="#">Đồ đan</a></li>
+                        <li><a href="#">Áo nỉ</a></li>
+                      </ul>
+                      <ul>
+                        <p class="mega_menu_product_category">NƯỚC HOA</p>
+                        <li><a href="#">Áo cánh / Áo sơ mi</a></li>
+                        <li><a href="#">Túi xách và Balo</a></li>
+                        <li><a href="#">Khăn quàng cổ và Foulards</a></li>
+                        <li><a href="#">Dệt kim Hats và Gloves</a></li>
+                        <li><a href="#">Vớ và Socks</a></li>
+                        <li><a href="#">Jewerly</a></li>
+                        <li><a href="#">Bị bảo vệ</a></li>
+                        <li><a href="#">Giày</a></li>
+                      </ul>
+                      <ul>
+                        <p class="mega_menu_product_category">TRANG SỨC</p>
+                        <li><a href="#">Áo cánh / Áo sơ mi</a></li>
+                        <li><a href="#">Túi xách và Balo</a></li>
+                        <li><a href="#">Khăn quàng cổ và Foulards</a></li>
+                        <li><a href="#">Dệt kim Hats và Gloves</a></li>
+                        <li><a href="#">Vớ và Socks</a></li>
+                        <li><a href="#">Jewerly</a></li>
+                        <li><a href="#">Nước hoa</a></li>
+                        <li><a href="#">Giày</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                </li>
+                <li><a href="blog.html">TIN TỨC</a></li>
+                <li><a href="#">BẢN ĐỒ</a></li>
+                <li><a href="contact.html">LIÊN HỆ</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header_right">
+            <nav>
+              <ul class="cart_list">
+                <li class="header_top_cart"><i class="fas fa-sort-up icon_cart_sort_up"></i><a href="shopping_cart.html"><i class="fas fa-shopping-cart"></i>
+                    <div class="number-cart">   <span></span></div></a>
+                  <div class="mega_menu_cart">
+                    <nav class="menu_cart">
+                      <ul class="cart_list"></ul>
+                    </nav>
+                    <div class="cart_total">
+                      <p class="cart_total_title">Tổng tiền</p>
+                      <p class="cart_total_price"> </p>
+                    </div><a class="cart_btn" href="shopping_cart.html">XEM GIỎ HÀNG</a>
+                  </div>
+                </li>
+                <li class="header_top_search"><a href=""><i class="fas fa-search">     </i></a></li>
+                <li class="icon_menu_open">
+                  <label class="fas fa-bars" for="r1"></label>
+                </li>
+                <li class="icon_menu_close">
+                  <label class="fas fa-times" for="r2"></label>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <script src="js/all.js"></script>
+      <script src="js/megaMenu-cart.js"></script>
+      <main class="main">
+        <div class="box">
+          <section class="content_banner container-fluid">
+            <div class="wrapper row">
+              <div class="col-6 col-sm-6 content_banner_left">
+                <h2 class="banner_title">GreenVera</h2>
+                <p class="banner_caption">Sản phẩm tinh dầu dưỡng da mới nhất của Mandala</p>
+                <p class="banner_price">GIÁ CHỈ 750.000<sup>đ</sub></p>
+                <div class="banner__orderNow__btn">
+                  <label for="newsletter-toogle-show">MUA HÀNG</label>
+                </div>
+              </div>
+              <div class="col-6 col-sm-6"></div>
+            </div>
+          </section>
+          <div class="policy">
+            <div class="wrapper">
+              <div class="policy_item">
+                <div class="cover">   <img src="./assets/images/plane.png" alt="policy image">
+                  <p class="policy_item_content">Miễn phí vận chuyển</p>
+                </div>
+              </div>
+              <div class="policy_item">
+                <div class="cover">   <img src="./assets/images/gift.png" alt="policy image">
+                  <p class="policy_item_content">Nhận ngay quà tặng trị giá 350.000đ</p>
+                </div>
+              </div>
+              <div class="policy_item">
+                <div class="cover">   <img src="./assets/images/star.png" alt="policy image">
+                  <p class="policy_item_content">Giảm 30% cho đơn hàng trên 5.000.000đ</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <section class="showcase">
+            <div class="wrapper">
+              <div class="showcase_top row">
+                <div class="showcase_item col-12 col-sm-6">
+                  <div class="showcase_item_product"><img src="./assets/images/img8.jpg" alt="showcase image">
+                  </div>
+                  <div class="showcase_item_color" style="color: white">
+                                <div class="color_item"></div><i class="fas fa-caret-left arrow_left"></i>
+                                <div class="showcase_item_content">
+                                  <h4>SỮA TẮM</h4><img src="./assets/images/2.png" alt="SỮA TẮM">
+                                </div>
+                  </div>
+                  <div class="showcase_item_color">
+                                <div class="color_item"></div><i class="fas fa-caret-right arrow_right"></i>
+                                <div class="showcase_item_content">
+                                  <h4>NƯỚC HOA</h4><img src="./assets/images/1.png" alt="NƯỚC HOA">
+                                </div>
+                  </div>
+                  <div class="showcase_item_product"><img src="./assets/images/img14.jpg" alt="showcase image">
+                    <div class="showcase_item_content">
+                      <p class="showcase_content_date">Từ 1/6-5/6/2015</p>
+                      <p class="showcase_content_discount">-40%</p><a href="#">MUA HÀNG</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="showcase_item col-12 col-sm-6"><img class="img-fluid" src="./assets/images/img13.jpg" alt="showcase image">
+                  <div class="showcase_item_content"><a class="btn_play" href="#"><i class="fas fa-play"></i></a></div>
+                  <p class="corrine">CORRINE 2015</p>
+                </div>
+              </div>
+              <div class="showcase_bottom row">
+                <div class="showcase_item col-12 col-sm-6"><img class="img-fluid" src="./assets/images/img10.jpg" alt="showcase image">
+                  <div class="showcase_bottom_left">
+                    <p class="content_combo">COMBO TẮM TRẮNG</p>
+                    <p class="content_atHome">Tại Nhà</p>
+                  </div>
+                </div>
+                <div class="showcase_item col-12 col-sm-6">
+                  <div class="showcase_item_product"><img src="./assets/images/img9.jpg" alt="showcase image">
+                  </div>
+                  <div class="showcase_item_color">
+                                <div class="color_item"></div><i class="fas fa-caret-right arrow_right"></i>
+                                <div class="showcase_item_content">
+                                  <h4>TRANG SỨC</h4><img src="./assets/images/1.png" alt="TRANG SỨC">
+                                </div>
+                  </div>
+                  <div class="showcase_item_color">
+                    <div class="color_item"></div><i class="fas fa-caret-left arrow_left"></i>
+                    <div class="showcase_item_content"><img class="img_daisy" src="./assets/images/daisy.png" alt="showcase image">
+                      <p class="showcase_item_content_text">Quyến rũ hơn</p>
+                      <p class="content_withDaisy">DAISY</p>
+                    </div>
+                  </div>
+                  <div class="showcase_item_product"><img src="./assets/images/img11.jpg" alt="showcase image">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="testimonial">
+            <div class="wrapper">
+              <div class="testimonial_banner"><img src="./assets/images/testimormial_bg.jpg" alt="testimonial_banner"></div>
+              <div class="testimonial_content row">
+                <div class="col-lg-8">
+                  <div class="carousel slide" id="carouselExampleIndicators" data-bs-ride="carousel">
+                    <div class="carousel-indicators testimonial_indicators">
+                      <button class="active" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                                    <div class="testimonial_content_item">
+                                      <div class="item_left"><img class="item_avatar img-fluid" src="./assets/images/testimonial_avatar.jpg" alt="testimonial avatar"></div>
+                                      <div class="item_right">
+                                        <p class="item_right_content">Vẫn là vẻ bề ngoài vô cùng đơn giản với các tông màu trắng, hồng làm chủ đạo nhưng lại tạo ra sức hút kỳ lạ với những ai cầm trên tay sản phẩm ấy! Với công nghệ cải tiến mới nhất, hãng Rohto</p>
+                                        <div class="item_right_regency"> 
+                                          <p class="item_right_name">TUTILE</p>
+                                          <p class="item_right_position">_ Giám đốc phát triển sản phẩm</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                      </div>
+                      <div class="carousel-item">
+                                    <div class="testimonial_content_item">
+                                      <div class="item_left"><img class="item_avatar img-fluid" src="./assets/images/testimonial_avatar.jpg" alt="testimonial avatar"></div>
+                                      <div class="item_right">
+                                        <p class="item_right_content">Vẫn là vẻ bề ngoài vô cùng đơn giản với các tông màu trắng, hồng làm chủ đạo nhưng lại tạo ra sức hút kỳ lạ với những ai cầm trên tay sản phẩm ấy! Với công nghệ cải tiến mới nhất, hãng Rohto</p>
+                                        <div class="item_right_regency"> 
+                                          <p class="item_right_name">TUTILE</p>
+                                          <p class="item_right_position">_ Giám đốc phát triển sản phẩm</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                      </div>
+                      <div class="carousel-item">
+                                    <div class="testimonial_content_item">
+                                      <div class="item_left"><img class="item_avatar img-fluid" src="./assets/images/testimonial_avatar.jpg" alt="testimonial avatar"></div>
+                                      <div class="item_right">
+                                        <p class="item_right_content">Vẫn là vẻ bề ngoài vô cùng đơn giản với các tông màu trắng, hồng làm chủ đạo nhưng lại tạo ra sức hút kỳ lạ với những ai cầm trên tay sản phẩm ấy! Với công nghệ cải tiến mới nhất, hãng Rohto</p>
+                                        <div class="item_right_regency"> 
+                                          <p class="item_right_name">TUTILE</p>
+                                          <p class="item_right_position">_ Giám đốc phát triển sản phẩm</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4"></div>
+              </div>
+            </div>
+          </section>
+          <section class="slide-product">
+            <div class="product">
+              <div class="box">   
+                <div class="product__title">
+                  <div class="product__title__name">
+                    <div class="product__title__name--new">Sản phẩm mới</div>
+                    <div class="product__title__name--hot">Sản phẩm bán chạy</div>
+                    <div class="product__title__name--special">Sản phẩm đặc biệt</div>
+                  </div>
+                  <div class="product__title__underline"><img src="../assets/images/3.png" alt="product title underline"></div>
+                  <div class="product__title__menu">
+                    <nav> 
+                      <ul>
+                        <li><a href="#">Mỹ phẩm</a></li>
+                        <li><a href="#">.</a></li>
+                        <li><a href="#">Chăm sóc da</a></li>
+                        <li><a href="#">.</a></li>
+                        <li><a href="#">Dành cho tóc</a></li>
+                        <li><a href="#">.</a></li>
+                        <li><a href="#">Nước hoa</a></li>
+                        <li><a href="#">.</a></li>
+                        <li><a href="#">Trang sức</a></li>
+                        <li><a href="#">.</a></li>
+                        <li><a href="#">Quà tặng</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+                <div class="product__item">
+                  <figure>
+                    <input type="radio" name="c" id="c1" checked>
+                    <input type="radio" name="c" id="c2">
+                                <div class="product__items__detail"><img src="./assets/images/grid/product1.jpg" alt="product image"><a class="viewMore" href="detail_product.html">Xem chi tiết</a>
+                                  <div class="product__items__detail__content">
+                                    <h4>TYFFANI</h4><a href="detail_product.html">
+                                      <p class="product__name">Mỹ phẩm châu Âu</p>
+                                      <p class="underline"></p></a>
+                                    <div class="price_info"><span class="price">335.000<sup>đ</sup></span><span class="price old false"><sup>đ</sup></span></div>
+                                  </div>
+                                  <div class="product__items__detail__btn">
+                                    <div class="item-buying">
+                                      <button>MUA HÀNG</button><a class="heart" href="#"><i class="fas fa-heart"></i></a><a class="alt" href="#"><i class="fas fa-sync-alt"></i></a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="product__items__detail"><img src="./assets/images/grid/product5.jpg" alt="product image"><a class="viewMore" href="detail_product.html">Xem chi tiết</a>
+                                  <div class="product__items__detail__content">
+                                    <h4>OHUI</h4><a href="detail_product.html">
+                                      <p class="product__name">Mỹ phẩm châu Âu</p>
+                                      <p class="underline"></p></a>
+                                    <div class="price_info"><span class="price">335.000<sup>đ</sup></span><span class="price old false"><sup>đ</sup></span></div>
+                                  </div>
+                                  <div class="product__items__detail__btn">
+                                    <div class="item-buying">
+                                      <button>MUA HÀNG</button><a class="heart" href="#"><i class="fas fa-heart"></i></a><a class="alt" href="#"><i class="fas fa-sync-alt"></i></a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="product__items__detail"><img src="./assets/images/grid/product4.jpg" alt="product image"><a class="viewMore" href="detail_product.html">Xem chi tiết</a>
+                                  <div class="product__items__detail__content">
+                                    <h4>HOME</h4><a href="detail_product.html">
+                                      <p class="product__name">Mỹ phẩm châu Âu</p>
+                                      <p class="underline"></p></a>
+                                    <div class="price_info"><span class="price">335.000<sup>đ</sup></span><span class="price old true">450.000<sup>đ</sup></span></div>
+                                  </div>
+                                  <div class="product__items__detail__btn">
+                                    <div class="item-buying">
+                                      <button>MUA HÀNG</button><a class="heart" href="#"><i class="fas fa-heart"></i></a><a class="alt" href="#"><i class="fas fa-sync-alt"></i></a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="product__items__detail"><img src="./assets/images/grid/product6.jpg" alt="product image"><a class="viewMore" href="detail_product.html">Xem chi tiết</a>
+                                  <div class="product__items__detail__content">
+                                    <h4>DEBORA</h4><a href="detail_product.html">
+                                      <p class="product__name">Mỹ phẩm châu Âu</p>
+                                      <p class="underline"></p></a>
+                                    <div class="price_info"><span class="price">335.000<sup>đ</sup></span><span class="price old false"><sup>đ</sup></span></div>
+                                  </div>
+                                  <div class="product__items__detail__btn">
+                                    <div class="item-buying">
+                                      <button>MUA HÀNG</button><a class="heart" href="#"><i class="fas fa-heart"></i></a><a class="alt" href="#"><i class="fas fa-sync-alt"></i></a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="product__items__detail"><img src="./assets/images/grid/product3.jpg" alt="product image"><a class="viewMore" href="detail_product.html">Xem chi tiết</a>
+                                  <div class="product__items__detail__content">
+                                    <h4>SARVON</h4><a href="detail_product.html">
+                                      <p class="product__name">Mỹ phẩm châu Âu</p>
+                                      <p class="underline"></p></a>
+                                    <div class="price_info"><span class="price">335.000<sup>đ</sup></span><span class="price old false"><sup>đ</sup></span></div>
+                                  </div>
+                                  <div class="product__items__detail__btn">
+                                    <div class="item-buying">
+                                      <button>MUA HÀNG</button><a class="heart" href="#"><i class="fas fa-heart"></i></a><a class="alt" href="#"><i class="fas fa-sync-alt"></i></a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="product__items__detail"><img src="./assets/images/grid/product2.jpg" alt="product image"><a class="viewMore" href="detail_product.html">Xem chi tiết</a>
+                                  <div class="product__items__detail__content">
+                                    <h4>TYFFANY</h4><a href="detail_product.html">
+                                      <p class="product__name">Mỹ phẩm châu Âu</p>
+                                      <p class="underline"></p></a>
+                                    <div class="price_info"><span class="price">335.000<sup>đ</sup></span><span class="price old false"><sup>đ</sup></span></div>
+                                  </div>
+                                  <div class="product__items__detail__btn">
+                                    <div class="item-buying">
+                                      <button>MUA HÀNG</button><a class="heart" href="#"><i class="fas fa-heart"></i></a><a class="alt" href="#"><i class="fas fa-sync-alt"></i></a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="product__items__detail"><img src="./assets/images/grid/product1.jpg" alt="product image"><a class="viewMore" href="detail_product.html">Xem chi tiết</a>
+                                  <div class="product__items__detail__content">
+                                    <h4>HOME</h4><a href="detail_product.html">
+                                      <p class="product__name">Mỹ phẩm châu Âu</p>
+                                      <p class="underline"></p></a>
+                                    <div class="price_info"><span class="price">335.000<sup>đ</sup></span><span class="price old true">450.000<sup>đ</sup></span></div>
+                                  </div>
+                                  <div class="product__items__detail__btn">
+                                    <div class="item-buying">
+                                      <button>MUA HÀNG</button><a class="heart" href="#"><i class="fas fa-heart"></i></a><a class="alt" href="#"><i class="fas fa-sync-alt"></i></a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="product__items__detail"><img src="./assets/images/grid/product5.jpg" alt="product image"><a class="viewMore" href="detail_product.html">Xem chi tiết</a>
+                                  <div class="product__items__detail__content">
+                                    <h4>DEBORA</h4><a href="detail_product.html">
+                                      <p class="product__name">Mỹ phẩm châu Âu</p>
+                                      <p class="underline"></p></a>
+                                    <div class="price_info"><span class="price">335.000<sup>đ</sup></span><span class="price old false"><sup>đ</sup></span></div>
+                                  </div>
+                                  <div class="product__items__detail__btn">
+                                    <div class="item-buying">
+                                      <button>MUA HÀNG</button><a class="heart" href="#"><i class="fas fa-heart"></i></a><a class="alt" href="#"><i class="fas fa-sync-alt"></i></a>
+                                    </div>
+                                  </div>
+                                </div>
+                    <div class="product__items--arrow-right">
+                      <label class="fas fa-arrow-right" for="c2"></label>
+                    </div>
+                    <div class="product__items--arrow-left">
+                      <label class="fas fa-arrow-left" for="c1"></label>
+                    </div>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="social_media">  
+            <div class="wrapper">
+              <nav class="social_content">
+                            <li class="social_item"><a href="#">
+                                <div class="social_item_content"><i class="fab fa-facebook-f social_icon"></i>
+                                  <p class="social_title">FACEBOOK</p>
+                                </div></a></li>
+                            <li class="social_separation">
+                              <div class="social_separation_item"></div>
+                            </li>
+                            <li class="social_item"><a href="#">
+                                <div class="social_item_content"><i class="fab fa-twitter social_icon"></i>
+                                  <p class="social_title">TWITTER</p>
+                                </div></a></li>
+                            <li class="social_separation">
+                              <div class="social_separation_item"></div>
+                            </li>
+                            <li class="social_item"><a href="#">
+                                <div class="social_item_content"><i class="fab fa-instagram social_icon"></i>
+                                  <p class="social_title">INSTAGRAM</p>
+                                </div></a></li>
+                            <li class="social_separation">
+                              <div class="social_separation_item"></div>
+                            </li>
+                            <li class="social_item"><a href="#">
+                                <div class="social_item_content"><i class="fab fa-google-plus-g social_icon"></i>
+                                  <p class="social_title">GOOGLE +</p>
+                                </div></a></li>
+                            <li class="social_separation">
+                              <div class="social_separation_item"></div>
+                            </li>
+                            <li class="social_item"><a href="#">
+                                <div class="social_item_content"><i class="fab fa-pinterest social_icon"></i>
+                                  <p class="social_title">PINTEREST</p>
+                                </div></a></li>
+                            <li class="social_separation">
+                              <div class="social_separation_item"></div>
+                            </li>
+                            <li class="social_item"><a href="#">
+                                <div class="social_item_content"><i class="fab fa-linkedin-in social_icon"></i>
+                                  <p class="social_title">LINKEDIN</p>
+                                </div></a></li>
+                            <li class="social_separation">
+                              <div class="social_separation_item"></div>
+                            </li>
+              </nav>
+            </div>
+          </section>
+          <section class="main_bottom">
+            <div class="wrapper container-fluid">
+              <div class="main_bottom_content row">
+                <div class="main_bottom_about col-12 col-sm-6 col-md-6 col-lg-4">
+                              <h4 class="title">VỀ CHÚNG TÔI</h4><img class="line" src="./assets/images/3.png" alt="about us image"><br><img src="./assets/images/mandala-logo.png" alt="about us image">
+                  <p class="caption">Giới thiệu chung về mỹ phẩm handmade Mandala</p>
+                  <p class="about_content">Hi, chào các nàng ... sau khá nhiều lời hứa hão thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt. Hi, chào các nàng ... sau khá nhiều lời hứa hão thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt.sau khá nhiều lời hứa hão thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt.</p><a class="about_readmore" href="#">Xem thêm</a>
+                </div>
+                <div class="main_bottom_blog col-12 col-sm-6 col-md-6 col-lg-4">
+                              <h4 class="title">BLOG</h4><img class="line" src="./assets/images/3.png" alt="blog image"><img class="blog_banner" src="./assets/images/img12.jpg" alt="blog image">
+                  <p class="caption">Review son kem Bourjois Velvet</p>
+                  <p class="blog_content">Hi, chào các nàng ... sau khá nhiều lời hứa hão thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt. </p>
+                  <p class="blog_author">Bởi NamTran ( 27 / 05 / 2015 )</p>
+                  <div class="blog_box"><a class="blog_readmore" href="#">Đọc thêm<i class="fas fa-chevron-right"></i></a>
+                    <p class="blog_comment">23 Bình luận</p>
+                  </div>
+                </div>
+                <div class="main_bottom_mixture col-12 col-sm-12 col-md-12 col-lg-4">  
+                  <div class="main_bottom_contact">
+                                <h4 class="title">GỬI EMAIL CHO CHÚNG TÔI</h4><img class="line" src="./assets/images/3.png" alt="mail image">
+                    <form class="contact_form" action="">
+                      <input type="email" placeholder="Email của bạn" checked>
+                      <p>Gửi email để nhận được những ưu đãi mới nhất</p>
+                      <button type="submit">Gửi</button>
+                    </form>
+                  </div>
+                  <div class="main_bottom_tag_product">
+                                <h4 class="title">TAG SẢN PHẨM</h4><img class="line" src="./assets/images/3.png" alt="tag product image">
+                    <div class="list_product"><a href="#">Đồng hồ</a><a href="#">Túi</a><a href="#">Phụ kiện</a><a href="#">Đồng hồ</a><a href="#">Túi</a><a href="#">Giày</a><a href="#">Sandal</a><a href="#">Áo sơ mi</a><a href="#">Nước hoa</a><a href="#">Giày</a><a href="#">Sandal</a><a href="#">Trẻ em</a><a href="#">Thời trang nữ</a><a href="#">Trẻ em</a><a href="#">Thời trang nữ</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer_top"> 
+          <div class="wrapper_top">
+            <div class="footer_top_contact">
+              <h4 class="contact_title">LIÊN HỆ VỚI CHÚNG TÔI</h4>
+              <div class="contact_location"><i class="fas fa-map-marker-alt"> </i>
+                <p>Tầng 4, Tòa nhà Hanoi Group Số 442 Đội Cấn, P.Cống Vị, Q. Ba Đình, Hà Nội</p>
+              </div>
+              <div class="contact_device">
+                <div class="contact_device_item"> <i class="fas fa-phone-alt"> </i>
+                  <p>(04) 6674 2332</p>
+                </div>
+                <div class="contact_device_item"> <img src="./assets/images/fax.png" alt="Fax image">
+                  <p>(04) 3786 8904</p>
+                </div>
+                <div class="contact_device_item">   <i class="fas fa-phone-alt"> </i>
+                  <p>(08) 6680 9686</p>
+                </div>
+                <div class="contact_device_item"> <i class="fas fa-envelope"> </i>
+                  <p>Support@bizwed.vn</p>
+                </div>
+              </div>
+            </div>
+            <div class="footer_top_content">
+              <nav>
+                <ul class="footer_top_items">
+                  <h4 class="footer_top_title">CHUYẾN HÀNG</h4>
+                  <li><a href="404.html">Mua sắm trực tuyến</a></li>
+                  <li><a href="#">Đến từ chúng tôi gửi đến</a></li>
+                  <li><a href="#">Chính sách vận chuyển</a></li>
+                  <li><a href="#">Thông tin vận chuyển</a></li>
+                </ul>
+                <ul class="footer_top_items">
+                  <h4 class="footer_top_title">HỖ TRỢ</h4>
+                  <li><a href="#">Câu chuyện của chúng tôi</a></li>
+                  <li><a href="#">Thanh toán an toàn</a></li>
+                  <li><a href="#">Tùy chọn vận chuyển</a></li>
+                  <li><a href="#">Chính sách vận chuyển</a></li>
+                </ul>
+                <ul class="footer_top_items">
+                  <h4 class="footer_top_title">THÔNG TIN</h4>
+                  <li><a href="aboutUs.html">Về Chúng Tôi</a></li>
+                  <li><a href="#">Điều khoản &amp; Điều kiện</a></li>
+                  <li><a href="#">Chính sách riêng tư</a></li>
+                  <li><a href="#">Đơn đặt hàng và Returns</a></li>
+                </ul>
+                <ul class="footer_top_items">
+                  <h4 class="footer_top_title">MY ACCOUNT</h4>
+                  <li><a href="login.html">Đăng nhập</a></li>
+                  <li><a href="register.html">Đăng kí</a></li>
+                  <li><a href="account.html">Kiểm tra</a></li>
+                  <li><a href="shopping_cart.html">Xem giỏ hàng</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="footer_bottom">
+          <div class="wrapper_bottom">
+            <div class="footer_bottom_content">
+              <p>© Copyright 2008-2014 DKT Technology JSC</p><img src="./assets/images/payment.png" alt="payment image">
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    <script src="js/all.js"></script>
+  </Body>
+</html>

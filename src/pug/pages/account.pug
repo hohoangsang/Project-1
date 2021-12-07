@@ -1,0 +1,36 @@
+extends ../layouts/layout_account
+
+block main
+    main.main__account
+        include ../variables/account_variables.pug
+        include ../base/mixins.pug
+        .wrapper
+            section.path
+                .path__content
+                +listPath(PathAccount)  
+            section.account
+                .box    
+                    .account__content.row
+                        artile.account__content__left.col-12.col-sm-12.col-md-12.col-lg-9
+                            .account__content__title
+                                h1 TÀI KHOẢN
+                            .account__content__table
+                                table
+                                    thead
+                                        each item in listThTable
+                                            td= item
+                                    tbody   
+                                        +tableAccount("Đã thanh toán", "0")
+                                        +tableAccount("Đã thanh toán", "0")
+                                        +tableAccount("Đã thanh toán", "0")
+                                        +tableAccount("Thanh Toán 50%", "275.000")
+                        aside.account__content__right.col-12.col-sm-12.col-md-12.col-lg-3
+                            .account__detail__title 
+                                h4 CHI TIẾT TÀI KHOẢN
+                            .account_detail_content
+                                .content__user
+                                    +accountDetail("fa-user", "GiangLe", "Leanhgiang89@gmail.com")
+                                .content__location
+                                    +accountDetail("fa-map-marker-alt ", "", "Tòa nhà Hà Nội group 442 Đội Cẩn, Ba Đình Hà Nội")
+                                .content_phone
+                                    +accountDetail("fa-phone-alt", "", "(04) 3786 8904")

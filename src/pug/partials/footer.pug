@@ -1,0 +1,38 @@
+include ../variables/footer_variables.pug
+footer.footer
+    .footer_top 
+        .wrapper_top
+            .footer_top_contact
+                h4.contact_title LIÊN HỆ VỚI CHÚNG TÔI
+                .contact_location
+                    i.fas.fa-map-marker-alt 
+                    p Tầng 4, Tòa nhà Hanoi Group Số 442 Đội Cấn, P.Cống Vị, Q. Ba Đình, Hà Nội
+                .contact_device
+                    .contact_device_item  
+                        i.fas.fa-phone-alt 
+                        p (04) 6674 2332
+                    .contact_device_item  
+                        img(src="./assets/images/fax.png", alt="Fax image") 
+                        p (04) 3786 8904
+                    .contact_device_item    
+                        i.fas.fa-phone-alt 
+                        p (08) 6680 9686
+                    .contact_device_item  
+                        i.fas.fa-envelope 
+                        p Support@bizwed.vn
+                    
+            .footer_top_content
+                nav
+                    each footer_items in footer_top
+                        -const {title, items} = footer_items    
+                            ul.footer_top_items
+                                h4.footer_top_title= title
+                                each item in items
+                                    li
+                                        a(href=item.href)= item.name
+    .footer_bottom
+        .wrapper_bottom
+            .footer_bottom_content
+                each items in footer_bottom
+                        p= items.title
+                        img(src=items.image , alt="payment image")

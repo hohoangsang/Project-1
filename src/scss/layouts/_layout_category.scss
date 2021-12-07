@@ -1,0 +1,75 @@
+.category{
+    .category__content{
+        .category__content__title{
+            display: flex;
+            align-items: baseline;
+            border-bottom: 1px solid $header-line;
+            i{
+                margin-right: .7rem;
+            }
+        }
+        h2{
+            @include h2;
+        }
+
+        .category__content__list{
+            margin-bottom: 1.5rem;
+            .category__content__list__item{
+                h3{
+                    button{
+                        padding: .9rem 0;
+                        font-size: .9rem;
+                        border-color: transparent;
+                        outline-color: transparent;
+                        box-shadow: none;
+                        background-color: $white;
+                    }
+                    button[aria-expanded = "true"]{
+                        color: $green;
+                    } 
+                }
+                .accordion-body{
+                    padding: .5rem 1rem;
+                    nav{
+                        ul{
+                            margin: 0;
+                            li{
+                                font-size: .9rem;
+                                color: $grey;
+                            }
+                        }   
+                    }
+                }
+            }
+        }
+        .categories__compare{
+            h2{
+                border-bottom: 1px solid $header-line;
+            }
+            p{
+                font-size: .9rem;
+                color: $grey;
+                margin: 1rem 0;
+            }
+        }
+        .categories__tag{
+            h2{
+                border-bottom: 1px solid $header-line;
+            }
+            .categories__tag__btn{
+                margin: 1.5rem 0;
+                button{
+                    @include TagBtn;
+                }
+                button:hover{
+                    @include TagBtnHover($black, $white);
+                }
+            }
+        }
+        .categories__img{
+            img{
+                max-width: 100%;
+            }
+        }
+    }
+}

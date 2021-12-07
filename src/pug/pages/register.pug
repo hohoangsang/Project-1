@@ -1,0 +1,35 @@
+extends ../layouts/layout_register
+
+block main
+    main.register
+        include ../variables/register_variables.pug
+        include ../base/mixins.pug
+        .wrapper
+            section.path
+                .path__content
+                +listPath(PathRegister)  
+            section.register__box
+                .box
+                    .register__content
+                        .register__content__title
+                            h1 ĐĂNG KÝ
+                        .register__content__form
+                            form(action="")
+                                .register__content__form__top
+                                    h3 THÔNG TIN CÁ NHÂN
+                                    +formGroup("Tên trước *", "text", "firstName", "firstName")
+                                    +formGroup("Tên sau *", "text", "lastName", "lastName")
+                                    +formGroup("Email *", "email", "email", "email")
+                                    +formGroup("Password *", "password", "password", "password")
+                                .register__content__form__notification
+                                    input(type="checkbox") 
+                                    p.notification_text Đăng ký nhận bản tin
+                                .register__content__form__bottom
+                                    h3 THÔNG TIN ĐĂNG NHẬP
+                                    +formGroup("Mật khẩu *", "password", "password", "password")
+                                    +formGroup("Xác nhận mật khẩu *", "password", "confirmPassword", "confirmPassword")
+                                .register__content__form__btn
+                                    button(type="submit") Gửi
+                                    button 
+                                        i.fas.fa-reply
+                                        | Quay lại

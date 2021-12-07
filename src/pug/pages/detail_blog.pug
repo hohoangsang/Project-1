@@ -1,0 +1,59 @@
+extends ../layouts/layout_detail_blog
+
+block main  
+    main.main_blog-detail
+        include ../variables/blog_variables.pug
+        include ../base/mixins.pug
+        .wrapper
+            section.path
+                .path__content
+                +listPath(PathBlog) 
+            section
+                .blog-detail
+                    .blog-detail__title.title-content
+                        h1 BLOG
+                    .blog-detail__content.row
+                        aside.col-12.col-md-12.col-lg-3
+                            .blog-detail__aside
+                                .blog-detail__aside__title
+                                    h3 BÀI VIẾT MỚI NHẤT
+                                .blog-detail__aside__post
+                                    +post-item("./assets/images/blog-detail/img1.jpg")
+                                    +post-item("./assets/images/blog-detail/img3.jpg")
+                                    +post-item("./assets/images/blog-detail/img2.jpg")
+                                .blog-detail__aside__tag
+                                    h3 BLOG TAGS
+                                    .blog-detail__aside__tag__btn
+                                        each item in listBtnTagBlog
+                                            button(type="button")= item
+                                .blog-detail__aside__video
+                                    h3 LATEST VIDEO
+                                    .blog-detail__aside__video__img
+                                        .video__img__overlay
+                                            .video__img__overlay__icon
+                                                i.fas.fa-play
+                        article.col-12.col-md-12.col-lg-9
+                            .blog-detail__article
+                                img(src="./assets/images/blog-detail/13_Blog_Detail.jpg" alt = "blog content").img-fluid
+                                .blog-detail__article__title
+                                    h2= BlogDetailContent.title
+                                .blog-detail__article__post
+                                    p= BlogDetailContent.content 
+                                    span= BlogDetailContent.author
+                                .blog-detail__article__post__btn
+                                    a(href="#") Đọc thêm
+                                        i.fas.fa-angle-right
+                                    a(href="#") 23 Bình Luận
+                                .blog-detail__article__tag
+                                    h5 Tag:
+                                    p Men
+                                .blog-detail__article__comments
+                                    form(action="")
+                                        h3 ĐÓNG GÓP Ý KIẾN
+                                        +formGroup("Tên *", "text", "guestName", "guestName")
+                                        +formGroup("Email *", "email", "guestEmail", "guestEmail")
+                                        .form-group
+                                            label Ý kiến *
+                                            textarea(rows="9")
+                                        .form-btn
+                                            button(type="submit") GỬI Ý KIẾN
